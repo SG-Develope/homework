@@ -1,1 +1,54 @@
-/* 여기에 스타일을 구현해 주세요 */
+html,
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 325px;
+  position: relative;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+
+  /* 해당 영역의 가로 길이와 세로길이 조절 
+  ( transform: translate(x, y);)*/
+  transform: translate(-50%, -50%);
+}
+
+.wrapper .img-pictures div {
+  margin-right: 20px;
+  float: left;
+  position: relative;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.wrapper .img-pictures div > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+/* 배우 온라인 상태 */
+.wrapper .img-pictures div > span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0.01em;
+
+  &.online {
+    background-color: #4cfe88;
+  }
+
+  &.offline {
+    background-color: #dbdbdb;
+  }
+}

@@ -1,16 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avatars 과제</title>
-  <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
-  <link rel="icon" href="/src/assets/favicon/likelion.svg" />
-  <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css">
-  <link rel="stylesheet" href="./styles/avatars.css" />
-</head>
-<body>
-  <!-- 여기에 마크업을 구성해 주세요. -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatars 과제</title>
+    <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+    <link rel="stylesheet" href="./styles/avatars.css" />
+  </head>
+  <body>
+    <!-- 여기에 마크업을 구성해 주세요. -->
+
+    <!-- 웹 접근성을 고려하여 img 태그에 aria 속성을 주며 수정했었지만 
+     배경은 나오나 텍스트가 화면에 나오지 않는 방도를 못 찾아서
+     alt로 스크린 리더 해석을 대신하고
+     span영역을 잡아서 온라인상태를 확인하는 식으로 갔습니다. 
+     텍스트가 없는 태그(<span class="online"></span>)
+     말고 다른방법이 없을까용 더욱 성장하는 교육생이 되겠습니다. -->
+
+    <div class="wrapper">
+      <div class="img-pictures">
+        <div>
+          <img src="./src/avatars/images/face1.jpg" alt="신세경님 오프라인 상태입니다." />
+          <span class="online" aria-hidden="true"></span>
+        </div>
+        <div>
+          <img src="./src/avatars/images/face2.jpg" alt="김태희님 온라인 상태입니다." />
+          <span class="online" aria-hidden="true"></span>
+        </div>
+        <div>
+          <img src="./src/avatars/images/face3.jpg" alt="미연님 오프라인 상태입니다." />
+          <span class="offline" aria-hidden="true"></span>
+        </div>
+        <div>
+          <img src="./src/avatars/images/face4.jpg" alt="민니님 온라인 상태입니다." />
+          <span class="online" aria-hidden="true"></span>
+        </div>
+        <div>
+          <img src="./src/avatars/images/face7.jpg" alt="장동건님 온라인 상태입니다." />
+          <span class="online" aria-hidden="true"></span>
+        </div>
+        <div>
+          <img src="./src/avatars/images/face5.jpg" alt="김우빈님 온라인 상태입니다." />
+          <span class="online" aria-hidden="true"></span>
+        </div>
+        <div>
+          <img src="./src/avatars/images/face6.jpg" alt="이민호님 오프라인 상태입니다." />
+          <span class="offline" aria-hidden="true"></span>
+        </div>
+        <div>
+          <img src="./src/avatars/images/face8.jpg" alt="덱스님 오프라인 상태입니다." />
+          <span class="offline" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
