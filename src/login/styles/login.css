@@ -1,0 +1,157 @@
+.ui-component {
+    font-size: 16px;
+    color: #121212;
+    padding: 10px;
+    inline-size: 800px;
+    block-size: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    --naver-background: #03cf5d;
+    --naver-logo-start: #1bf008;
+    --naver-logo-end: #03cca8;
+
+    input:focus,
+    button:focus label:focus {
+        outline: 2px solid#24388d;
+
+    }
+
+
+    .logo {
+        inline-size: 100%;
+        text-align: center;
+        margin-block-end: 30px;
+    }
+
+    .input-information {
+
+        .input {
+
+            input {
+
+                box-sizing: border-box;
+                inline-size: 100%;
+                block-size: 48px;
+                padding: 14px;
+                block-size: 48px;
+                border: 2px solid #dadada;
+
+                &:focus:invalid+p {
+                    visibility: visible;
+
+                }
+            }
+
+            #pw-content:not(:placeholder-shown) {
+                letter-spacing: 1.25em;
+            }
+        }
+
+        p {
+            margin-block-start: 2px;
+            font-size: 0.875em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: red;
+            visibility: hidden;
+        }
+
+    }
+
+    button {
+        color: white;
+        text-align: center;
+        inline-size: 100%;
+        block-size: 56px;
+        font-size: 35;
+        border: none;
+        background: var(--naver-background);
+    }
+
+    .login-option {
+        margin-block-start: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .remember-login {
+            label {
+                display: flex;
+                column-gap: 10px;
+
+            }
+
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+            }
+
+            .checkIn-icon {
+                display: none;
+            }
+
+            .checkOut-icon {
+                display: inline;
+            }
+
+            input {
+
+                &:checked~.checkIn-icon {
+                    display: inline;
+                }
+
+                &:checked~.checkOut-icon {
+                    display: none;
+                }
+            }
+        }
+
+        .ip-security {
+            width: 100px;
+            position: relative;
+
+            input {
+                display: none;
+
+                &:checked+.ip-config::after {
+                    margin-left: 10px;
+                    content: "ON";
+                    color: var(--naver-background);
+                }
+
+                &:not(:checked)+.ip-config::after {
+                    margin-left: 10px;
+                    content: "OFF";
+                    color: var(--naver-background);
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width : 768px) {
+    .ui-component {
+        inline-size: 100%;
+        block-size: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .login-option {
+        display: flex;
+        justify-content: end !important;
+    }
+
+    .ip-security {
+        display: none;
+    }
+
+}
